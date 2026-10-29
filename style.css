@@ -194,6 +194,13 @@ p code, li code { background: var(--line); border-radius: 5px; padding: 0.05em 0
 .btn-primary:hover { background: var(--accent-hover); color: var(--accent-ink); }
 .btn:focus-visible { outline-offset: 4px; border-radius: 999px; }
 
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line-strong);
+}
+.btn-outline:hover { border-color: var(--ink-soft); color: var(--ink); }
+
 .btn-quiet {
   background: transparent;
   color: var(--ink-faint);
@@ -615,7 +622,7 @@ p code, li code { background: var(--line); border-radius: 5px; padding: 0.05em 0
   font-size: clamp(30px, 4.6vw, 40px);
   margin: 12px 0 14px;
 }
-.tip-action { margin-top: 28px; }
+.tip-action { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
 .cup-icon {
   margin: 0 auto;

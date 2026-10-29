@@ -5,7 +5,7 @@
      read-me and the "First open" steps talk about; the .dmg only if there is no zip), with "Version X · N MB"
      under it. If GitHub says "no release yet" (404), is busy (rate limit), or the Mac is
      offline, nothing changes: the button keeps its plain link to the releases page.
-  2. Tip jar: shows a real button only when config.js has an https:// link; otherwise "Tip jar opening soon".
+  2. Tip jar: one button per https:// link in config.js (tipLinks, in order); otherwise "Tip jar opening soon".
   3. The swap video plays (muted, looping) only while it's on screen, and never by itself when the viewer has
      asked for reduced motion. A Pause / Play button is always there.
   4. A Copy button for the Terminal line.
@@ -99,16 +99,36 @@
     }
   }
 
-  var tipUrl = safeTipUrl(config.tipUrl);
-  if (tipUrl) {
+  // config.tipLinks: [{label, url}] in order; the first is the big button, the others are outlined. A link that isn't
+  // https:// is skipped; a missing or over-long label reads "Send a coffee". Nothing valid = "opening soon" stays.
+  var tipLinks = [];
+  if (Array.isArray(config.tipLinks)) {
+    for (var t = 0; t < config.tipLinks.length && tipLinks.length < 4; t++) {
+      var item = config.tipLinks[t] || {};
+      var url = safeTipUrl(item.url);
+      if (!url) continue;
+      var label = typeof item.label === "string" ? item.label.trim() : "";
+      tipLinks.push({ url: url, label: label && label.length <= 24 ? label : "Send a coffee" });
+    }
+  }
+  if (tipLinks.length) {
     each("[data-tip]", function (box) {
-      var link = document.createElement("a");
-      link.className = "btn btn-primary";
-      link.href = tipUrl;
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.textContent = "Send a coffee";
-      box.replaceChildren ? box.replaceChildren(link) : (box.innerHTML = "", box.appendChild(link));
+      var links = [];
+      for (var i = 0; i < tipLinks.length; i++) {
+        var link = document.createElement("a");
+        link.className = "btn " + (i === 0 ? "btn-primary" : "btn-outline");
+        link.href = tipLinks[i].url;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = tipLinks[i].label;
+        links.push(link);
+      }
+      if (box.replaceChildren) {
+        box.replaceChildren.apply(box, links);
+      } else {
+        box.innerHTML = "";
+        for (var j = 0; j < links.length; j++) box.appendChild(links[j]);
+      }
     });
   }
 
