@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oto — a turntable for your desktop</title>
+  <meta name="description" content="Oto puts a calm, photo-realistic room on your Mac's desktop, with a turntable that follows Spotify or Apple Music. Free, for macOS 14 or newer.">
+  <!-- The preview card when the link is pasted into a chat or a bio (needs the site's final address). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Oto — a turntable for your desktop">
+  <meta property="og:description" content="A calm, photo-realistic room on your Mac's desktop, with a turntable that follows Spotify or Apple Music. Free, for macOS 14 or newer.">
+  <meta property="og:url" content="https://oto-turntable.github.io/oto-releases/">
+  <meta property="og:image" content="https://oto-turntable.github.io/oto-releases/images/hinoki-mid-1470.jpg">
+  <meta property="og:image:width" content="1470">
+  <meta property="og:image:height" content="956">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4eee3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#191613" media="(prefers-color-scheme: dark)">
+  <!-- Only this site's own files load, plus one question to GitHub for the newest download. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://api.github.com; img-src 'self'; media-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Oto, back to the top">
+        <span class="brand-kanji" lang="ja" aria-hidden="true">音</span>
+        <span class="brand-name">Oto</span>
+      </a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#features">What it does</a>
+        <a href="#first-open">First open</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <a class="header-download" data-download href="https://github.com/oto-turntable/oto-releases/releases/latest">Download</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1 id="hero-title" class="hero-title">
+            <span class="hero-word">Oto</span>
+            <span class="hero-kanji" lang="ja" aria-hidden="true">音</span>
+          </h1>
+          <p class="kanji-note"><span lang="ja">音</span> (<i lang="ja-Latn">oto</i>) means “sound” in Japanese.</p>
+          <p class="tagline">A turntable for your desktop.</p>
+          <p class="lede">Oto puts a calm, photo-realistic room on your Mac’s desktop, behind your icons. The record on the
+            turntable is whatever you’re playing in Spotify or Apple Music. Change the album and the record changes
+            with it. In the two rooms, an arm even puts the old record away and fetches the new one.</p>
+          <div class="cta">
+            <a class="btn btn-primary" data-download href="https://github.com/oto-turntable/oto-releases/releases/latest">
+              <svg class="btn-icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download Oto
+            </a>
+            <p class="fine">Free · macOS&nbsp;14 or newer · Apple silicon and Intel · about&nbsp;400&nbsp;MB · <span class="beta">Beta</span></p>
+            <p class="fine version" data-version hidden></p>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="images/hinoki-mid-1470.jpg"
+               srcset="images/hinoki-mid-735.jpg 735w, images/hinoki-mid-1470.jpg 1470w"
+               sizes="(min-width: 960px) 640px, calc(100vw - 32px)"
+               width="1470" height="956" fetchpriority="high" decoding="async"
+               alt="Oto’s Turntable view from above: a walnut-brown record player on a pale wooden desk, a black record with a black label and the Side A cover, a red setting sun, in the middle, a silver tonearm, and the matching album sleeve lying beside it.">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2. What it does -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">What it does</p>
+          <h2 id="features-title">A quiet room that listens along</h2>
+          <p class="section-lede">Click the little record icon in the menu bar to pick a room and switch things on
+            or off. For the settings window, choose <strong>Open Oto…</strong> in that menu.</p>
+        </header>
+
+        <article class="feature feature-wide">
+          <div class="feature-text">
+            <h3>Two rooms and a close-up</h3>
+            <p>The <strong>Listening Room</strong> by day, <strong>After Hours</strong> by lamplight, and a top-down
+              <strong>Turntable</strong> view. Each comes in three framings: wide, mid and close.</p>
+          </div>
+          <div class="pair">
+            <figure>
+              <img src="images/listening-room-1470.jpg"
+                   srcset="images/listening-room-735.jpg 735w, images/listening-room-1470.jpg 1470w"
+                   sizes="(min-width: 1120px) 536px, (min-width: 640px) calc(50vw - 40px), calc(100vw - 32px)"
+                   width="1470" height="956" loading="lazy" decoding="async"
+                   alt="The Listening Room by day: sunlight and bamboo shadows through a paper window, a cream turntable on a wooden desk, a box of records with one album standing up, three albums on a shelf and a paper lantern.">
+              <figcaption>Listening Room · day</figcaption>
+            </figure>
+            <figure>
+              <img src="images/after-hours-1470.jpg"
+                   srcset="images/after-hours-735.jpg 735w, images/after-hours-1470.jpg 1470w"
+                   sizes="(min-width: 1120px) 536px, (min-width: 640px) calc(50vw - 40px), calc(100vw - 32px)"
+                   width="1470" height="956" loading="lazy" decoding="async"
+                   alt="After Hours: the same room at night, the window a deep evening blue and the paper lantern glowing warm orange.">
+              <figcaption>After Hours · night</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="feature">
+          <figure class="feature-figure">
+            <img src="images/hinoki-close-1470.jpg"
+                 srcset="images/hinoki-close-735.jpg 735w, images/hinoki-close-1470.jpg 1470w"
+                 sizes="(min-width: 960px) 620px, calc(100vw - 32px)"
+                 width="1470" height="956" loading="lazy" decoding="async"
+                 alt="The Turntable view, close: a dark wooden turntable seen from above with a record whose label shows three overlapping coloured circles, and the same cover on the sleeve beside it.">
+          </figure>
+          <div class="feature-text">
+            <h3>The Turntable view</h3>
+            <p>Look straight down at the record. The cover of the album that’s playing sits on the sleeve beside
+              the turntable, and the label turns slowly while the music plays.</p>
+          </div>
+        </article>
+
+        <article class="feature flip">
+          <figure class="feature-figure">
+            <img src="images/record-wheel-1280.jpg"
+                 srcset="images/record-wheel-640.jpg 640w, images/record-wheel-1280.jpg 1280w"
+                 sizes="(min-width: 960px) 620px, calc(100vw - 32px)"
+                 width="1280" height="776" loading="lazy" decoding="async"
+                 alt="Mid-swap in the Listening Room: the arm carries a black record up to the box of sleeves while the turntable’s platter waits empty.">
+          </figure>
+          <div class="feature-text">
+            <h3>The record wheel</h3>
+            <p>Every album you play gets its own sleeve in the wheel. When the album changes, the arm puts the old
+              record back in its sleeve and pulls the new one out.</p>
+            <p class="note"><a href="#swap">Watch a swap</a></p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="pair pair-tight feature-figure">
+            <figure>
+              <img src="images/needle-early-880.jpg" width="880" height="572" loading="lazy" decoding="async"
+                   alt="Close-up of the turntable early in a song: the needle rests near the outer edge of the record.">
+              <figcaption>Start of the song</figcaption>
+            </figure>
+            <figure>
+              <img src="images/needle-late-880.jpg" width="880" height="572" loading="lazy" decoding="async"
+                   alt="The same close-up near the end of the song: the needle has moved most of the way in towards the label.">
+              <figcaption>Near the end</figcaption>
+            </figure>
+          </div>
+          <div class="feature-text">
+            <h3>The tonearm follows the song</h3>
+            <p>The needle creeps inward as the song plays and swings back out at the end, the way a real record
+              does.</p>
+          </div>
+        </article>
+
+        <article class="feature flip">
+          <figure class="feature-figure">
+            <img src="images/tea-800.jpg" width="800" height="520" loading="lazy" decoding="async"
+                 alt="A cup of green tea on a dark round coaster, risen out of the wooden desk beside the turntable, next to a dark vase with a plum branch.">
+          </figure>
+          <div class="feature-text">
+            <h3>“T?”</h3>
+            <p>Switch it on and a panel in the desk opens and a cup of tea rises up. “Panel seam” shows or hides
+              the panel’s outline when the tea is put away.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <figure class="feature-figure">
+            <img src="images/shelf-650.jpg" width="650" height="462" loading="lazy" decoding="async"
+                 alt="A wooden ledge on the wall holding three album covers, above the record box, with the paper lantern glowing beside them at night.">
+          </figure>
+          <div class="feature-text">
+            <h3>Most played shelf</h3>
+            <p>Your top three albums stand on a ledge above the wheel. Oto counts what you actually listen to, on
+              your Mac.</p>
+          </div>
+        </article>
+
+        <article class="feature feature-wide">
+          <div class="feature-text">
+            <h3>Mood lighting</h3>
+            <p>The room’s lights follow the genre of the song: a warm amber pool for jazz, cool neon for
+              electronic, and more. You can also pick a mood yourself. <strong>Dance to the beat</strong> makes the
+              lantern pulse with the music (Gentle, Normal or Strong).</p>
+            <p class="note">Mood lighting starts off: switch it on in the record menu. Dance to the beat asks once for
+              “System Audio Recording” and needs macOS 14.2 or newer. Oto listens only to the music app, and nothing
+              is recorded or sent anywhere.</p>
+          </div>
+          <div class="pair">
+            <figure>
+              <img src="images/mood-jazz-980.jpg" width="980" height="637" loading="lazy" decoding="async"
+                   alt="After Hours lit for jazz: the whole room glows a warm amber orange.">
+              <figcaption>Jazz</figcaption>
+            </figure>
+            <figure>
+              <img src="images/mood-neon-980.jpg" width="980" height="637" loading="lazy" decoding="async"
+                   alt="After Hours lit for electronic music: magenta and violet light, with the lantern glowing cool lavender.">
+              <figcaption>Electronic</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <div class="small-features">
+          <article class="mini">
+            <h3>Realistic pause</h3>
+            <p>Pause the music and the needle lifts while the record slows to a stop. Press play and it spins up
+              and the needle lowers back onto the song.</p>
+          </article>
+          <article class="mini">
+            <h3>Low Power Mode</h3>
+            <p>When your Mac is in Low Power Mode (or Reduce Motion is on), record swaps and pauses happen
+              instantly instead of being animated. That’s on purpose, to save energy.</p>
+          </article>
+        </div>
+
+        <p class="placeholder-note">Apart from Oto’s own “Side A” cover, the album covers in these pictures are made
+          up for this page. Oto shows the real cover of whatever you’re playing.</p>
+      </div>
+    </section>
+
+    <!-- 3. The swap, moving -->
+    <section class="section section-alt" id="swap" aria-labelledby="swap-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">See it move</p>
+          <h2 id="swap-title">A record swap, in real time</h2>
+        </header>
+        <figure class="video-figure">
+          <video class="swap-video" data-swap-video width="1280" height="776" muted loop playsinline controls
+                 preload="none" poster="images/swap-poster.jpg"
+                 aria-label="A record swap in the Listening Room: the arm lifts the record off the turntable, slides it into its sleeve in the box, the wheel turns to another album, and the arm brings that record back to the turntable.">
+            <source src="images/swap-loop.mp4" type="video/mp4">
+            <a href="images/swap-loop.mp4">Watch the record swap (MP4 video, 2 MB)</a>
+          </video>
+          <figcaption>
+            <span>The album changed, so the arm puts the old record away and fetches the new one. This takes about
+              13 seconds.</span>
+            <button class="video-toggle" type="button" data-video-toggle hidden>Pause</button>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 4. Works with + requirements -->
+    <section class="section" id="requirements" aria-labelledby="requirements-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Works with</p>
+          <h2 id="requirements-title">Spotify and Apple Music</h2>
+        </header>
+        <div class="players">
+          <div class="player-card">
+            <h3>Spotify</h3>
+            <p>The Spotify desktop app. Oto knows exactly where you are in the song.</p>
+          </div>
+          <div class="player-card">
+            <h3>Apple Music</h3>
+            <p>The Music app on your Mac. Oto sometimes has to estimate where you are in the song, so the needle
+              can be a moment off.</p>
+          </div>
+        </div>
+        <h3 class="list-title">What you need</h3>
+        <ul class="checklist">
+          <li><strong>macOS 14 Sonoma or newer.</strong></li>
+          <li><strong>Any recent Mac:</strong> Apple silicon (M1 and later) or Intel. It’s one app for both. Intel
+            Macs should work but haven’t been tested on a real one yet.</li>
+          <li><strong>The Spotify desktop app or Apple Music.</strong></li>
+          <li><strong>An internet connection</strong> to fetch album covers.</li>
+          <li><strong>About 400 MB</strong> for the download. The rooms are big, detailed pictures.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. First open -->
+    <section class="section section-alt" id="first-open" aria-labelledby="first-open-title">
+      <div class="wrap narrow">
+        <header class="section-head">
+          <p class="eyebrow">First open</p>
+          <h2 id="first-open-title">Opening Oto the first time</h2>
+          <p class="section-lede">Oto isn’t from the App Store, so macOS asks you to confirm it once. It takes about
+            a minute.</p>
+        </header>
+        <ol class="steps">
+          <li>
+            <h3>Put Oto in Applications</h3>
+            <p>Unzip the download: double-click <code>Oto-….zip</code> (Safari may already have done it). You get
+              “Oto”. Drag it into your Applications folder. Do this first: Oto can’t update itself from the
+              Downloads folder.</p>
+          </li>
+          <li>
+            <h3>Double-click Oto in Applications</h3>
+            <p>The first time, macOS stops it with a warning such as “Apple could not verify ‘Oto’ is free of
+              malware” or “Oto can’t be opened because Apple cannot check it for malicious software”. Close the
+              message with <strong>Done</strong>, <strong>OK</strong> or <strong>Cancel</strong> (whichever it
+              shows). Not “Move to Trash”.</p>
+          </li>
+          <li>
+            <h3>Allow it, once</h3>
+            <div class="os-cards">
+              <div class="os-card">
+                <h4>macOS 15 Sequoia or newer</h4>
+                <p>Open <strong>System Settings → Privacy &amp; Security</strong>, scroll down to “Oto was blocked to
+                  protect your Mac” and click <strong>Open Anyway</strong>. Confirm with your password or Touch ID,
+                  and click <strong>Open Anyway</strong> once more if macOS asks again.</p>
+              </div>
+              <div class="os-card">
+                <h4>macOS 14 Sonoma</h4>
+                <p>In Applications, Control-click (or right-click) Oto, choose <strong>Open</strong>, then
+                  <strong>Open</strong> again.</p>
+              </div>
+            </div>
+            <p>You only do this once. After that Oto opens normally.</p>
+          </li>
+          <li>
+            <h3>Say yes to Spotify or Music</h3>
+            <p>Oto lives in the menu bar (a little record icon, top right) and shows its settings the first time.
+              When music plays, macOS asks whether Oto may control Spotify or Music: click <strong>Allow</strong>.
+              That’s how it sees what’s playing.</p>
+          </li>
+        </ol>
+
+        <div class="callout" id="damaged">
+          <h3>If macOS says “Oto is damaged and can’t be opened”</h3>
+          <p>Oto isn’t broken. macOS is being extra strict with the download. Make sure Oto is in Applications, open
+            the <strong>Terminal</strong> app, paste this line and press Return, then open Oto again:</p>
+          <div class="code-row">
+            <pre class="code"><code id="xattr-line">xattr -dr com.apple.quarantine /Applications/Oto.app</code></pre>
+            <button class="copy-btn" type="button" data-copy="xattr-line" hidden>Copy</button>
+          </div>
+          <p class="copy-status" data-copy-status aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Privacy -->
+    <section class="section" id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap narrow">
+        <header class="section-head">
+          <p class="eyebrow">Privacy</p>
+          <h2 id="privacy-title">What Oto does online, all of it</h2>
+          <p class="section-lede">No account, no ads, no analytics, no tracking. This list was checked against
+            Oto’s code.</p>
+        </header>
+        <dl class="privacy-list">
+          <div>
+            <dt>Album covers</dt>
+            <dd>The cover picture is downloaded from Spotify’s or Apple’s servers. When Oto doesn’t already know
+              where a cover is, it looks it up with Spotify’s public link preview (the song’s Spotify link) or
+              Apple’s public iTunes Search (the song, artist and album name, or Apple’s own number for the song,
+              and your Mac’s region so Apple looks in the right country’s store). No login, no cookies. Covers are
+              kept on your Mac, so an album you’ve played before shows up instantly, even offline.</dd>
+          </div>
+          <div>
+            <dt>Genres, for mood lighting</dt>
+            <dd>Only while Mood lighting is on (it starts off). If the music app doesn’t say the genre itself, Oto asks
+              Apple’s iTunes Search using the artist and album name, and your Mac’s region so Apple looks in the
+              right country’s store. Each answer is remembered on your Mac.</dd>
+          </div>
+          <div>
+            <dt>Dance to the beat</dt>
+            <dd>Off until you switch it on. Oto then listens only to the music app that’s playing, to find the beat.
+              Not the microphone, not other apps. macOS asks you once for “System Audio Recording”. Nothing is
+              recorded, saved or sent anywhere.</dd>
+          </div>
+          <div>
+            <dt>Updates</dt>
+            <dd>About once a day, Oto checks this project’s update list on GitHub, and new versions are downloaded
+              from GitHub. Oto only installs an update that carries the maker’s signature.</dd>
+          </div>
+          <div>
+            <dt>What’s playing</dt>
+            <dd>Oto asks Spotify or Music what’s playing, on your Mac (macOS asks your permission first). It only
+              plays, pauses or skips when you use its own menu.</dd>
+          </div>
+          <div>
+            <dt>What stays on your Mac</dt>
+            <dd>Your albums, their covers and how often you’ve played them (for the wheel and the shelf). None of it
+              is sent anywhere.</dd>
+          </div>
+        </dl>
+        <p class="fine-print">Like any website, Spotify, Apple and GitHub can see your Mac’s internet address when
+          Oto asks them something. Apart from that region code, nothing about you is sent.</p>
+      </div>
+    </section>
+
+    <!-- 7. Tip jar -->
+    <section class="section section-tip" id="tip" aria-labelledby="tip-title">
+      <div class="wrap narrow tip-box">
+        <svg class="cup-icon" viewBox="0 0 64 64" width="72" height="72" aria-hidden="true" focusable="false">
+          <g class="cup-steam" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M24.5 6c-2.6 3 2.6 5.6 0 9.2"/>
+            <path d="M34 4c-2.6 3 2.6 5.6 0 9.2"/>
+          </g>
+          <ellipse class="cup-saucer" cx="30" cy="54.5" rx="24" ry="4.6"/>
+          <path class="cup-handle" d="M43.6 27.5h2.9a6.2 6.2 0 0 1 0 12.4h-4.6" fill="none"/>
+          <path class="cup-body" d="M15 21h30l-2.4 25.2a4.8 4.8 0 0 1-4.8 4.4H22.2a4.8 4.8 0 0 1-4.8-4.4z"/>
+          <ellipse class="cup-coffee" cx="30" cy="21.6" rx="13.8" ry="2.4"/>
+          <path class="cup-band" d="M16.2 31.5h27.6" fill="none" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h2 id="tip-title">Send me a coffee</h2>
+        <p>Oto is free. If it makes your desk a little nicer, you can send the person who made it a coffee: a small
+          tip, whatever you like. Thank you!</p>
+        <div class="tip-action" data-tip>
+          <span class="btn btn-quiet">Tip jar opening soon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap narrow">
+        <header class="section-head">
+          <p class="eyebrow">Questions</p>
+          <h2 id="faq-title">Good to know</h2>
+        </header>
+        <div class="faq">
+          <details>
+            <summary>Why does macOS warn me the first time?</summary>
+            <div class="answer">
+              <p>Apps from the App Store, or from developers in Apple’s paid Developer Program, are “notarized”:
+                Apple has scanned them. Oto is a free hobby project and isn’t notarized, so macOS asks you to allow it
+                once. The steps are in <a href="#first-open">First open</a>. If it says Oto is “damaged”, use
+                <a href="#damaged">the one-line fix</a>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Will it slow my Mac down?</summary>
+            <div class="answer">
+              <p>Oto only draws when something on the desk moves: the turning record, a swap, the lights changing.
+                Between movements it waits. When windows cover the desktop or the screen goes to sleep, it stops
+                drawing completely.</p>
+              <p>In Low Power Mode (or with Reduce Motion on), swaps and pauses are instant and the decorative motion,
+                like the swaying shadows and the dancing lantern, stands still.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Does it work with other music players?</summary>
+            <div class="answer">
+              <p>Not yet. Oto works with the Spotify desktop app and Apple Music (the Music app). Music playing in a
+                web browser or in other apps isn’t shown.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do updates work?</summary>
+            <div class="answer">
+              <p>Copies downloaded from this page update themselves: about once a day Oto checks for a new version
+                and installs it (your desktop blinks once). To check right away, click the record icon in the menu
+                bar and choose <strong>Check for Updates…</strong> from the menu.</p>
+              <p>After an update, macOS may ask again whether Oto may control Spotify or Music. Click
+                <strong>Allow</strong>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I remove it?</summary>
+            <div class="answer">
+              <ol>
+                <li>Click the record icon in the menu bar and untick <strong>Launch at Login</strong>.</li>
+                <li>Click the record icon again and choose <strong>Quit Oto</strong>.</li>
+                <li>Drag Oto from your Applications folder to the Trash.</li>
+              </ol>
+            </div>
+          </details>
+          <details>
+            <summary>Something looks wrong. How do I tell you?</summary>
+            <div class="answer">
+              <p>Use <a data-repo-link="issues" href="https://github.com/oto-turntable/oto-releases/issues">Report a problem</a>.
+                It helps to say which Mac you have (Apple silicon or Intel), your macOS version, whether you use
+                Spotify or Apple Music, and what you saw, with a screenshot if you can. If a record swap didn’t
+                animate, check whether Low Power Mode is on: swaps are instant there.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <p class="footer-title"><span lang="ja" aria-hidden="true">音</span> Oto</p>
+        <p>A turntable for your desktop. Made by Jack.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a data-download href="https://github.com/oto-turntable/oto-releases/releases/latest">Download</a></li>
+        <li><a data-repo-link="issues" href="https://github.com/oto-turntable/oto-releases/issues">Report a problem</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+      </ul>
+      <p class="legal">Oto is not affiliated with Spotify or Apple. Spotify is a trademark of Spotify AB; Apple Music
+        and macOS are trademarks of Apple Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>
