@@ -10,5 +10,5 @@
 */
 window.OTO_CONFIG = {
   repo: "oto-turntable/oto-releases",
-  tipUrl: "https://ko-fi.com/otoapp"
+  tipUrl: "https://cash.app/$OtoApp"
 };
