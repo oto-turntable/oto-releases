@@ -258,7 +258,7 @@ p code, li code { background: var(--line); border-radius: 5px; padding: 0.05em 0
 }
 
 .cta { margin-top: 28px; }
-.cta .btn { margin-bottom: 14px; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 14px; }
 
 .fine {
   font-size: 14px;
