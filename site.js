@@ -1,9 +1,9 @@
 /*
   Oto website: small improvements on top of a page that already works without JavaScript.
 
-  1. Download button: asks GitHub for the newest release and points the button straight at its .zip (the file the
-     read-me and the "First open" steps talk about; the .dmg only if there is no zip), with "Version X · N MB"
-     under it. If GitHub says "no release yet" (404), is busy (rate limit), or the Mac is
+  1. Download button: asks GitHub for the newest release and points the button straight at its .dmg (the
+     drag-to-Applications disk image the "First open" steps describe; the .zip only if there is no dmg), with
+     "Version X · N MB" under it. If GitHub says "no release yet" (404), is busy (rate limit), or the Mac is
      offline, nothing changes: the button keeps its plain link to the releases page.
   2. Tip jar: one button per https:// link in config.js (tipLinks, in order); otherwise "Tip jar opening soon".
   3. The swap video plays (muted, looping) only while it's on screen, and never by itself when the viewer has
@@ -31,18 +31,19 @@
   }
 
   // ---------- 1. Download button ----------
-  // The zip comes first: the read-me, the release notes and the steps on this page all say "unzip". (Opening Oto
-  // straight from a disk image would run it from a read-only disk, where it can't update itself.)
+  // The disk image comes first: open it, drag Oto onto the Applications shortcut, done — the steps on this page and
+  // the read-me say so (Jack's choice, 2026-10-29). The zip is the fallback when a release has no .dmg; it is also the
+  // file Oto's own updater fetches, which is why every release still has one.
   function pickAsset(assets) {
     var dmg = null, zip = null;
     for (var i = 0; i < assets.length; i++) {
       var a = assets[i];
       if (!a || typeof a.name !== "string" || typeof a.browser_download_url !== "string") continue;
       var name = a.name.toLowerCase();
-      if (!zip && /\.zip$/.test(name)) zip = a;
-      else if (!dmg && /\.dmg$/.test(name)) dmg = a;
+      if (!dmg && /\.dmg$/.test(name)) dmg = a;
+      else if (!zip && /\.zip$/.test(name)) zip = a;
     }
-    return zip || dmg;
+    return dmg || zip;
   }
 
   function showRelease(release) {
