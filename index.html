@@ -37,6 +37,7 @@
       <nav class="site-nav" aria-label="Sections">
         <a href="#install">Install</a>
         <a href="#features">What it does</a>
+        <a href="#suggest">Suggest</a>
         <a href="#tip">Send a coffee</a>
         <a href="#privacy">Privacy</a>
         <a href="#faq">Questions</a>
@@ -306,7 +307,34 @@
       </div>
     </section>
 
-    <!-- 5. Works with + requirements -->
+    <!-- 5. Suggestions (Oto's own "Send a Suggestion…" opens this section; the button comes from config.js, suggestUrl) -->
+    <section class="section section-alt" id="suggest" aria-labelledby="suggest-title">
+      <div class="wrap narrow tip-box">
+        <svg class="idea-icon" viewBox="0 0 64 64" width="72" height="72" aria-hidden="true" focusable="false">
+          <g class="idea-rays" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M32 3.5v5"/>
+            <path d="M14.5 11l3.5 3.5"/>
+            <path d="M49.5 11l-3.5 3.5"/>
+            <path d="M8 29.5h5"/>
+            <path d="M51 29.5h5"/>
+          </g>
+          <path class="idea-glass" d="M32 13.5a15 15 0 0 0-9.2 26.9c1.7 1.3 2.7 3.1 3 5.1h12.4c.3-2 1.3-3.8 3-5.1A15 15 0 0 0 32 13.5z"/>
+          <path class="idea-filament" d="M27.5 45.5v-8.5l4.5-4.5 4.5 4.5v8.5" fill="none"/>
+          <rect class="idea-base" x="25" y="48" width="14" height="4" rx="1.6"/>
+          <rect class="idea-base" x="26.6" y="54" width="10.8" height="4" rx="1.6"/>
+        </svg>
+        <h2 id="suggest-title">Suggestions</h2>
+        <p>Got an idea for Oto? A room you’d like to see, a switch that’s missing, something that should move a little
+          differently: tell me. I read every suggestion, and the good ones end up in the app.</p>
+        <div class="tip-action" data-suggest>
+          <a class="btn btn-outline" data-repo-link="new-issue" href="https://github.com/oto-turntable/oto-releases/issues/new?title=Suggestion%3A%20">Suggest on GitHub</a>
+        </div>
+        <p class="suggest-note" data-suggest-note>That opens a new issue on GitHub, which needs a free GitHub account.
+          Something broken rather than missing? <a data-repo-link="issues" href="https://github.com/oto-turntable/oto-releases/issues">Report a problem</a>.</p>
+      </div>
+    </section>
+
+    <!-- 6. Works with + requirements -->
     <section class="section" id="requirements" aria-labelledby="requirements-title">
       <div class="wrap">
         <header class="section-head">
@@ -336,7 +364,7 @@
       </div>
     </section>
 
-    <!-- 6. First open -->
+    <!-- 7. First open -->
     <section class="section section-alt" id="first-open" aria-labelledby="first-open-title">
       <div class="wrap narrow">
         <header class="section-head">
@@ -398,7 +426,7 @@
       </div>
     </section>
 
-    <!-- 7. Privacy -->
+    <!-- 8. Privacy -->
     <section class="section" id="privacy" aria-labelledby="privacy-title">
       <div class="wrap narrow">
         <header class="section-head">
@@ -449,7 +477,7 @@
       </div>
     </section>
 
-    <!-- 8. FAQ -->
+    <!-- 9. FAQ -->
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="wrap narrow">
         <header class="section-head">
@@ -510,6 +538,7 @@
                 It helps to say which Mac you have (Apple silicon or Intel), your macOS version, whether you use
                 Spotify or Apple Music, and what you saw, with a screenshot if you can. If a record swap didn’t
                 animate, check whether Low Power Mode is on: swaps are instant there.</p>
+              <p>Not a problem but an idea? That goes in <a href="#suggest">Suggestions</a>.</p>
             </div>
           </details>
         </div>
@@ -517,7 +546,7 @@
     </section>
   </main>
 
-  <!-- 9. Footer -->
+  <!-- 10. Footer -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-brand">

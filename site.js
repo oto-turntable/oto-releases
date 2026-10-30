@@ -9,7 +9,9 @@
   3. The swap video plays (muted, looping) only while it's on screen, and never by itself when the viewer has
      asked for reduced motion. A Pause / Play button is always there.
   4. A Copy button for the Terminal line.
-  5. Report-a-problem links follow the repo in config.js.
+  5. Report-a-problem links (and the Suggestions section's "new issue" fallback) follow the repo in config.js.
+  6. Suggestions: a "Send a suggestion" button for the https:// address in config.js (suggestUrl); without one the
+     section keeps its fallback, a link to open a new issue on GitHub.
 */
 (function () {
   "use strict";
@@ -28,6 +30,8 @@
     var base = "https://github.com/" + repo;
     each("[data-download]", function (a) { a.href = base + "/releases/latest"; });
     each('[data-repo-link="issues"]', function (a) { a.href = base + "/issues"; });
+    // (a new issue with "Suggestion: " already in its title, so ideas and problems are easy to tell apart)
+    each('[data-repo-link="new-issue"]', function (a) { a.href = base + "/issues/new?title=Suggestion%3A%20"; });
   }
 
   // ---------- 1. Download button ----------
@@ -131,6 +135,30 @@
         for (var j = 0; j < links.length; j++) box.appendChild(links[j]);
       }
     });
+  }
+
+  // ---------- 6. Suggestions ----------
+  // config.suggestUrl: the form (or any https:// page) the "Send a suggestion" button opens, checked like a tip link.
+  // Without one the page keeps what's in the HTML: the "open a new issue on GitHub" link (which follows config.repo,
+  // above) and the note that explains it. Oto's own "Send a Suggestion…" opens this section, so the form can change
+  // here without a new Oto version.
+  var suggestUrl = safeTipUrl(config.suggestUrl);
+  if (suggestUrl) {
+    each("[data-suggest]", function (box) {
+      var link = document.createElement("a");
+      link.className = "btn btn-primary";
+      link.href = suggestUrl;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = "Send a suggestion";
+      if (box.replaceChildren) {
+        box.replaceChildren(link);
+      } else {
+        box.innerHTML = "";
+        box.appendChild(link);
+      }
+    });
+    each("[data-suggest-note]", function (p) { p.hidden = true; });
   }
 
   // ---------- 3. Swap video ----------

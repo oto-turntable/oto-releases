@@ -681,6 +681,34 @@ p code, li code { background: var(--line); border-radius: 5px; padding: 0.05em 0
 .cup-band { stroke: var(--accent); }
 .cup-steam { opacity: 0.7; }
 
+/* ---------- Suggestions (laid out like the tip jar: .tip-box, .tip-action) ---------- */
+
+.idea-icon {
+  margin: 0 auto;
+  width: 72px;
+  height: 72px;
+  color: var(--ink-soft);
+}
+.idea-glass {
+  fill: var(--cup);
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+}
+.idea-filament {
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.idea-base { fill: var(--wood-deep); }
+.idea-rays { opacity: 0.7; }
+.tip-box .suggest-note {
+  margin-top: 18px;
+  font-size: 15px;
+  color: var(--ink-faint);
+}
+
 /* ---------- FAQ ---------- */
 
 .faq details { border-top: 1px solid var(--line); }
