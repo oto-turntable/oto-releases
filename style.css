@@ -315,6 +315,41 @@ p code, li code { background: var(--line); border-radius: 5px; padding: 0.05em 0
 }
 .section-lede { color: var(--ink-soft); font-size: 18px; }
 
+/* The five-step install list under the hero, and the hero's link to it. */
+.install-hint { margin-top: 12px; font-size: 16px; font-weight: 600; }
+.quick-steps {
+  list-style: none;
+  counter-reset: quick;
+  padding: 0;
+  margin: 0 0 22px;
+  display: grid;
+  gap: 16px;
+}
+.quick-steps > li {
+  counter-increment: quick;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  font-size: 19px;
+  line-height: 1.45;
+}
+.quick-steps > li::before {
+  content: counter(quick);
+  flex: none;
+  width: 34px;
+  height: 34px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.quick-note { max-width: 40em; }
+
 .eyebrow {
   font-size: 13px;
   font-weight: 700;
